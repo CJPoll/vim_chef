@@ -16,6 +16,10 @@ packages = case node['platform_family']
 			   %w(python-dev)
 		   end
 
+packages.each do | name |
+	package name
+end
+
 bash "install_cmake" do
 	user 'root'
 	code <<-EOH
