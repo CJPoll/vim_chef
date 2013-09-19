@@ -8,7 +8,19 @@
 #
 
 version = node['vim']['version']
-bash "download_vim" do 
+
+packages = case node['platform_family']
+		   when 'rhel'
+			   %w(python-devel)
+		   else
+			   %w(python-dev)
+		   end
+
+packages.each do |name|
+	package name
+end
+
+bash "install_vim" do 
 	user 'root'
 	code <<-EOH
 	hg clone https://code.google.com/p/vim/
