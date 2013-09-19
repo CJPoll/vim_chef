@@ -16,6 +16,8 @@ packages = case node['platform_family']
 			   %w(python-dev)
 		   end
 
+packages << "cmake"
+
 packages.each do |name|
 	package name
 end
