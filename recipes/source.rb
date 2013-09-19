@@ -7,6 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-version = node[:version]
+version = node['vim']['version']
 log = File.new("chef_logfile", "w+")
 log.write version
