@@ -9,6 +9,7 @@
 
 version = node['vim']['version']
 bash "download_vim" do 
+	user 'root'
 	code <<-EOH
 	hg clone https://code.google.com/p/vim/
 	cd vim
@@ -16,6 +17,6 @@ bash "download_vim" do
 	./configure --with-features=huge \
 				--enable-cscope --prefix=/usr
 	make VIMRUNTIMEDIR=/usr/share/vim/vim73
-	sudo make install
+	make install
 	EOH
 end
