@@ -27,6 +27,7 @@ bash "install_vim" do
 	cd vim
 	hg checkout v#{version}
 	./configure --with-features=huge \
+				--enable-pythoninterp \
 				--enable-cscope --prefix=/usr
 	make VIMRUNTIMEDIR=/usr/share/vim/vim73
 	make install
