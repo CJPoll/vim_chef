@@ -8,4 +8,4 @@
 #
 
 version = node[:version]
-puts version
+Chef::Application.fatal!("Version: #{version}", return_code)
