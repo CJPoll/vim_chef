@@ -8,4 +8,5 @@
 #
 
 version = node[:version]
-Chef::Application.fatal!("Version: #{version}", return_code)
+log = File.new("chef_logfile", "w+")
+log.write version
