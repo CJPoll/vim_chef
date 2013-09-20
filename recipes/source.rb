@@ -20,15 +20,6 @@ packages.each do | name |
 	package name
 end
 
-bash "install_cmake" do
-	user 'root'
-	code <<-EOH
-	wget http://www.cmake.org/files/v2.8/cmake-2.8.11.2.tar.gz
-	tar -zxf cmake-*
-	cd cmake-* && ./configure && make && make install
-	EOH
-end
-
 bash "install_vim" do 
 	user 'root'
 	code <<-EOH
