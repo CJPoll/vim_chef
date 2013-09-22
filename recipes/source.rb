@@ -20,6 +20,8 @@ packages.each do | name |
 	package name
 end
 
+include_recipe "mercurial::default"
+
 bash "install_vim" do 
 	user 'root'
 	code <<-EOH
