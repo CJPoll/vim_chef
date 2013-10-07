@@ -23,8 +23,9 @@ end
 include_recipe "mercurial::default"
 
 bash "install_vim" do 
-	user 'root'
+	user 'vagrant'
 	code <<-EOH
+	echo "INSTALL VIM RUNNING"
 	hg clone https://code.google.com/p/vim/
 	cd vim
 	hg checkout v#{version}
@@ -32,6 +33,6 @@ bash "install_vim" do
 				--enable-pythoninterp \
 				--enable-cscope --prefix=/usr
 	make VIMRUNTIMEDIR=/usr/share/vim/vim73
-	make install
+	sudo make install
 	EOH
 end
