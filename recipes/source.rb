@@ -44,5 +44,4 @@ bash "install_vim" do
 	make VIMRUNTIMEDIR=/usr/share/vim/vim73
 	sudo make install
 	EOH
-	action :nothing
 end
