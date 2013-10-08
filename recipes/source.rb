@@ -11,9 +11,9 @@ version = node['vim']['version']
 
 packages = case node['platform_family']
 		   when 'rhel'
-			   %w(python-devel)
+			   %w(python-devel cmake)
 		   else
-			   %w(python-dev libncurses5-dev)
+			   %w(python-dev libncurses5-dev cmake)
 		   end
 
 packages.each do |name|
