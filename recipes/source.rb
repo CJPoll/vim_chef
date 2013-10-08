@@ -20,6 +20,12 @@ packages.each do | name |
 	package name
 end
 
+uninstall_packages = %w{vim vim-common vim-runtime vim-tiny}
+
+uninstall_packages.each do 
+	action :uninstall
+end
+
 include_recipe "mercurial::default"
 
 bash "install_vim" do 
