@@ -16,14 +16,16 @@ packages = case node['platform_family']
 			   %w(python-dev)
 		   end
 
-packages.each do | name |
+packages.each do |name|
 	package name
 end
 
 uninstall_packages = %w{vim vim-common vim-runtime vim-tiny}
 
-uninstall_packages.each do 
-	action :remove
+uninstall_packages.each do |name|
+	package name do
+		action :remove
+	end
 end
 
 include_recipe "mercurial::default"
