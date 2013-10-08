@@ -32,7 +32,6 @@ include_recipe "mercurial::default"
 
 bash "install_vim" do 
 	user 'root'
-	cwd CHEF::CONFIG['file_cache_path']
 	code <<-EOH
 	hg clone https://code.google.com/p/vim/
 	cd vim
