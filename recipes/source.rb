@@ -40,7 +40,6 @@ bash "install_vim" do
 	./configure --with-features=huge \
 				--enable-pythoninterp \
 				--enable-rubyinterp \
-				--enable-perlinterp \
 				--enable-cscope --prefix=/usr
 	make VIMRUNTIMEDIR=/usr/share/vim/vim73
 	sudo make install
