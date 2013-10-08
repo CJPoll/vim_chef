@@ -23,7 +23,7 @@ end
 uninstall_packages = %w{vim vim-common vim-runtime vim-tiny}
 
 uninstall_packages.each do 
-	action :uninstall
+	action :remove
 end
 
 include_recipe "mercurial::default"
