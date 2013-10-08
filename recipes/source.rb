@@ -13,7 +13,7 @@ packages = case node['platform_family']
 		   when 'rhel'
 			   %w(python-devel)
 		   else
-			   %w(python-dev)
+			   %w(python-dev libncurses5-dev)
 		   end
 
 packages.each do |name|
