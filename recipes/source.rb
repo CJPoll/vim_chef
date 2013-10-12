@@ -31,7 +31,7 @@ end
 include_recipe "mercurial::default"
 
 bash "install_vim" do 
-	user 'root'
+	user 'vagrant'
 	code <<-EOH
 	cd ~
 	hg clone https://code.google.com/p/vim/
