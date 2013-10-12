@@ -13,7 +13,7 @@ packages = case node['platform_family']
 		   when 'rhel'
 			   %w(python-devel cmake)
 		   else
-			   %w(python-dev libncurses5-dev cmake)
+			   %w(python-dev ruby-dev libncurses5-dev cmake)
 		   end
 
 packages.each do |name|
@@ -31,9 +31,9 @@ end
 include_recipe "mercurial::default"
 
 bash "install_vim" do 
-	user 'vagrant'
+	user 'root'
 	code <<-EOH
-	cd ~
+	cd /home/vagrant
 	hg clone https://code.google.com/p/vim/
 	cd vim
 	hg checkout v#{version}
