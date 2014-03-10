@@ -13,7 +13,7 @@ packages = case node['platform_family']
 		   when 'rhel'
 			   %w(python-devel cmake)
 		   else
-			   %w(python-dev ruby-dev libncurses5-dev cmake)
+			   %w(python-dev ruby-dev libncurses5-dev cmake libgnome2-dev libgnomeui-dev libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev)
 		   end
 
 packages.each do |name|
