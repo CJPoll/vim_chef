@@ -30,7 +30,7 @@ end
 
 include_recipe "mercurial::default"
 
-bash "install_vim" do 
+bash "install_vim_gui" do 
 	user 'root'
 	code <<-EOH
 	cd /home/vagrant
