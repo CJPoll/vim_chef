@@ -41,7 +41,7 @@ bash "install_vim" do
 				--enable-pythoninterp \
 				--enable-rubyinterp \
 				--enable-cscope --prefix=/usr
-	make VIMRUNTIMEDIR=/usr/share/vim/vim73
+	make VIMRUNTIMEDIR=/usr/share/vim/vim74
 	sudo make install
 	EOH
 end
